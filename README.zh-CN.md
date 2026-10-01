@@ -25,14 +25,14 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/XMWML/codex-pages.git
+git clone https://github.com/xm6661885/codex-pages.git
 cd codex-pages
 
 python3 portal.py init      # 生成管理密码并打印
 python3 portal.py run       # 在配置端口前台运行
 ```
 
-打开输出的 URL（也可随时用 `python3 portal.py url` 查看）。默认端口为 `8765`，可在 `config.json` 中修改。
+打开输出的 URL（也可随时用 `python3 portal.py url` 查看）。端口取自 `config.json`（缺省为 `8765`）。
 
 ### 作为服务运行
 
@@ -102,7 +102,7 @@ python3 portal.py deploy ./app --name "应用名称" --type asgi --asgi app:app
 portal.py          HTTP 服务、管理页面、代理与 CLI（单文件）
 wsgi_runner.py     WSGI 子项目入口
 asgi_runner.py     ASGI 子项目入口
-config.json        {"port": 8765}
+config.json        监听端口，如 {"port": 8766}
 projects/<slug>/   project.json + code/             （运行时数据，已被 git 忽略）
 runtime/           <slug>.json 状态、<slug>.log 日志  （运行时数据，已被 git 忽略）
 .codex-pages-admin-password                         （机密，已被 git 忽略）

@@ -25,14 +25,14 @@ A tiny, self-hosted publishing portal. Drop in a static page, a WSGI app or an A
 ## Quick start
 
 ```bash
-git clone https://github.com/XMWML/codex-pages.git
+git clone https://github.com/xm6661885/codex-pages.git
 cd codex-pages
 
 python3 portal.py init      # creates the admin password and prints it
 python3 portal.py run       # foreground server on the configured port
 ```
 
-Open the printed URL (`python3 portal.py url` prints it again). The default port is `8765`, overridable in `config.json`.
+Open the printed URL (`python3 portal.py url` prints it again). The port comes from `config.json` (falls back to `8765`).
 
 ### Run as a service
 
@@ -102,7 +102,7 @@ Visit `/admin/` and sign in with the password from `init` (stored in `.codex-pag
 portal.py          HTTP server, admin UI, proxy and CLI (single file)
 wsgi_runner.py     entry point for WSGI sub-projects
 asgi_runner.py     entry point for ASGI sub-projects
-config.json        {"port": 8765}
+config.json        listening port, e.g. {"port": 8766}
 projects/<slug>/   project.json + code/            (runtime data, git-ignored)
 runtime/           <slug>.json state, <slug>.log   (runtime data, git-ignored)
 .codex-pages-admin-password                        (secret, git-ignored)
