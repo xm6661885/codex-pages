@@ -1,0 +1,10 @@
+# secrets
+.admin-secret
+.codex-pages-admin-password
+
+# runtime data & published projects
+projects/
+runtime/
+__pycache__/
+*.pyc
+*.tmp
